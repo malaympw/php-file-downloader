@@ -9,13 +9,13 @@ if (($fileContents != '') && (fopen($ToDir . $fileName, 'w') != 0)){#if able to 
 $file = fopen($ToDir . $fileName, 'w');#open directory
 $Write = fwrite($file, $fileContents);#write the file
 if ($Write != 0){#if it's done
-echo 'The file ' . $ToDir . $fileName . ' was successfully created! ';
+echo 'The file ' . $ToDir . $fileName . ' was successfully created! ';#if works
 echo '<br />';
-echo "<a href='$ToDir$fileName'>Link to file</a>";
+echo "<a href='$ToDir$fileName'>Link to file</a>";#Links to downloaded file
 fclose($file);
 }
 else{
-echo 'There was an error; the file could not be created.';
+echo 'There was an error; the file could not be created.';#if doesn't work
 }
 }
 }
